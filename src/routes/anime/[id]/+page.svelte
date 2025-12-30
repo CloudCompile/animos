@@ -5,6 +5,7 @@
 	import TextClamp from '$lib/components/composite/TextClamp.svelte';
 	import { getImageUrl, getTitle } from '$lib/utils/anime';
 	import Icon from '@iconify/svelte';
+	import { base } from '$app/paths';
 
 	export let data;
 
@@ -32,7 +33,7 @@
 				<span class="text-sm">{anime.synopsis}</span>
 			</TextClamp>
 		</div>
-		<a href="/anime/{anime.malId}/watch">
+		<a href="{base}/anime/{anime.malId}/watch">
 			<button
 				class="flex gap-2 items-center bg-accent text-black px-4 py-2 rounded-md w-fit font-semibold"
 				>Watch

@@ -4,6 +4,7 @@
 	import { getImageUrl, getTitle, isFullAnime } from '$lib/utils/anime';
 	import AnimeBadges from '../composite/AnimeBadges.svelte';
 	import type { Anime, RecommendationEntry } from '@tutkli/jikan-ts';
+	import { base } from '$app/paths';
 
 	export let anime: Anime | RecommendationEntry;
 
@@ -24,7 +25,7 @@
 	bind:this={element}
 	class="w-40 flex flex-col relative hover:nth cursor-pointer rounded-md"
 >
-	<a href="/anime/{anime.mal_id}" class="hover-trigger">
+	<a href="{base}/anime/{anime.mal_id}" class="hover-trigger">
 		<div class="overflow-hidden rounded-md content">
 			<img
 				src={imageUrl}

@@ -5,6 +5,7 @@
 	import Tile from './Tile.svelte';
 	import Icon from '@iconify/svelte';
 	import SearchForm from './SearchForm.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <div class="bg-[#101010] w-full flex flex-col">
@@ -26,7 +27,7 @@
 			</div>
 		</div>
 		<div class="flex-child">
-			<img src="/logo.svg" width="120px" alt="Logo" class="mx-auto" />
+			<img src="{base}/logo.svg" width="120px" alt="Logo" class="mx-auto" />
 		</div>
 		<div class="flex-child">
 			<SearchForm />
