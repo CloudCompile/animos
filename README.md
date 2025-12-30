@@ -22,6 +22,7 @@ It does not clutter the interface with annoying ads, and allows the user to watc
 
 - [Support](#support)
 - [Screenshots](#screenshots)
+- [GitHub Pages Deployment](#github-pages-deployment)
 - [Installation](#installation)
 - [Download links](#download)
 - [Features](#features)
@@ -55,6 +56,46 @@ To support development, request features, report features and more, join the off
 <br/><br/>
 
 <br/><br/>
+
+# GitHub Pages Deployment
+
+This project is now configured to deploy to GitHub Pages as a static website. The site will be available at `https://<username>.github.io/animos/` after deployment.
+
+## Deployment Setup
+
+1. **Enable GitHub Pages**:
+   - Go to your repository Settings → Pages
+   - Under "Source", select "GitHub Actions"
+
+2. **Trigger Deployment**:
+   - The site automatically deploys when you push to the `main` branch
+   - You can also manually trigger deployment from the Actions tab
+
+3. **View Your Site**:
+   - After deployment completes, your site will be live at: `https://<username>.github.io/animos/`
+
+## Local Development
+
+To build and preview the static site locally:
+
+```bash
+# Install dependencies
+npm install
+
+# Build the static site
+npm run build
+
+# Preview the built site
+npm run preview
+```
+
+The preview will be available at `http://localhost:4173/animos`
+
+## Important Notes
+
+- The static site version is a **client-side only** build. Server-side features like database access, authentication, and streaming will not work without a backend server.
+- The site uses SPA (Single Page Application) mode with a fallback to `index.html` for client-side routing.
+- All internal links use the base path `/animos` to work correctly on GitHub Pages.
 
 # Installation
 

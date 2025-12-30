@@ -5,6 +5,7 @@
 	import Tile from './Tile.svelte';
 	import Icon from '@iconify/svelte';
 	import { ICON_COLOR } from './constants';
+	import { base } from '$app/paths';
 
 	navigating.subscribe((val) => {
 		if (val)
@@ -15,17 +16,17 @@
 
 <AppRail>
 	<div slot="lead" class="text-white">
-		<a href="/">
+		<a href="{base}/">
 			<Tile label="Home">
 				<Icon icon="ri:home-2-fill" color={ICON_COLOR} width="24px" />
 			</Tile>
 		</a>
-		<a href="/trending">
+		<a href="{base}/trending">
 			<Tile label="Top airing">
 				<Icon icon="fa6-solid:chart-line" color={ICON_COLOR} width="24px" />
 			</Tile>
 		</a>
-		<a href="/popular">
+		<a href="{base}/popular">
 			<Tile label="Popular">
 				<Icon icon="fa6-solid:users" color={ICON_COLOR} width="24px" />
 			</Tile>

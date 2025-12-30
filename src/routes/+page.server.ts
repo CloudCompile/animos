@@ -12,5 +12,10 @@ export const load = async () => {
 		}
 	} catch (err) {
 		console.log("Failed to load trending anime")
-	};
+		// Return empty data for static build
+		return {
+			trendingList: [],
+			recommendations: { data: [] }
+		};
+	}
 };
